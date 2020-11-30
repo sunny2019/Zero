@@ -5,7 +5,7 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace GameMain
 {
-    public class ProcedureExample : ProcedureBase
+    public class Procedure_Demo0_Log : ProcedureBase
     {
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -15,6 +15,8 @@ namespace GameMain
             Log.Info(welcomeMessage);
             Log.Warning(welcomeMessage);
             Log.Error(welcomeMessage);
+            
+            
         }
     }
 }

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GameFrameworkDemo/Demo1_UI/Demo1_Luncher.unity
+    guid: 2f091d1209e7bf94fbc62160b4e9f08d
+  - enabled: 1
+    path: Assets/GameFrameworkDemo/Demo1_UI/Demo1_Menu.unity
+    guid: b189e5b729f035b409abc3837c9a9013
   m_configObjects: {}
