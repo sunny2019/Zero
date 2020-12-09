@@ -1,0 +1,9 @@
+{
+            "GameVersion": "0.1.0",
+            "InternalGameVersion": 0,
+            "CheckVersionUrl": "http://192.168.0.152:5215/Windows/version.txt",
+            "StandaloneAppUrl": "http://192.168.0.152:5215/Windows",
+            "IosAppUrl": "https://gameframework.cn",
+            "AndroidAppUrl": "https://gameframework.cn",
+            "END_OF_JSON": ""
+}
