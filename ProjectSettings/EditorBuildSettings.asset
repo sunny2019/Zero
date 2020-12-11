@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/GameMain/Common/Demo/Demo3_WebglUpdateFile/Demo3_Luncher.unity
-    guid: 201f2215fd12ef94b9de2082630fc09c
-  - enabled: 1
-    path: Assets/GameMain/Common/Demo/Demo1_UI/Demo1_Menu.unity
-    guid: b189e5b729f035b409abc3837c9a9013
+  m_Scenes: []
   m_configObjects: {}

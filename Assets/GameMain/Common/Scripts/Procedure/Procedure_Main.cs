@@ -56,6 +56,5 @@ namespace GameMain
         public bool isFinshed = false;
 
 
-        public override bool UseNativeDialog { get; }
     }
 }

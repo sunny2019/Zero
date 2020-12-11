@@ -18,14 +18,7 @@ namespace GameMain
     {
         
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
-        
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -59,8 +52,6 @@ namespace GameMain
         
         private void PreloadResources()
         {
-            
-
             // Preload fonts
             LoadFont("MainFont");
         }

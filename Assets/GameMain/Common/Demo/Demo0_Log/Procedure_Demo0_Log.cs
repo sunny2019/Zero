@@ -15,10 +15,6 @@ namespace GameMain
             Log.Info(welcomeMessage);
             Log.Warning(welcomeMessage);
             Log.Error(welcomeMessage);
-            
-            
         }
-
-        public override bool UseNativeDialog { get; }
     }
 }

@@ -585,3 +585,4 @@ MonoBehaviour:
     type: 3}
   m_UpdateResourceFormTemplate: {fileID: 4360649625598498008, guid: a6c731de80e9d824d8f657301a357269,
     type: 3}
+  DefaultFont: {fileID: 12800000, guid: 77cbb7c5404c10242ab59953e0746314, type: 3}

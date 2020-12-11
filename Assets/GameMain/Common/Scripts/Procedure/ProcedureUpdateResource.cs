@@ -22,10 +22,6 @@ namespace GameMain
         private List<UpdateLengthData> m_UpdateLengthData = new List<UpdateLengthData>();
         private UpdateResourceForm m_UpdateResourceForm = null;
 
-        public override bool UseNativeDialog
-        {
-            get { return true; }
-        }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -107,8 +103,8 @@ namespace GameMain
             }
 
             float progressTotal = (float) currentTotalUpdateLength / m_UpdateTotalZipLength;
-            string descriptionText = GameEntry.Localization.GetString("UpdateResource.Tips", m_UpdateSuccessCount.ToString(), m_UpdateCount.ToString(),
-                GetLengthString(currentTotalUpdateLength), GetLengthString(m_UpdateTotalZipLength), progressTotal, GetLengthString((int) GameEntry.Download.CurrentSpeed));
+            string descriptionText = string.Format("{0}/{1}, {2}/{3}, {4:P0}, {5}/s", m_UpdateSuccessCount.ToString(), m_UpdateCount.ToString(),
+                    GetLengthString(currentTotalUpdateLength), GetLengthString(m_UpdateTotalZipLength), progressTotal, GetLengthString((int) GameEntry.Download.CurrentSpeed));
             m_UpdateResourceForm.SetProgress(progressTotal, descriptionText);
         }
 
@@ -146,7 +142,7 @@ namespace GameMain
                 return;
             }
 
-            
+
             //if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
             {
                 GameEntry.UI.OpenUIForm("Assets/GameMain/Common/UI/UIForms/DialogForm.prefab", "DefaultGroup", new DialogParams

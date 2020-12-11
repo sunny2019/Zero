@@ -23,6 +23,5 @@ namespace GameMain
         }
 
 
-        public override bool UseNativeDialog { get; }
     }
 }

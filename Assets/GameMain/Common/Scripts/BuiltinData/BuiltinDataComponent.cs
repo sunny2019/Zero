@@ -37,6 +37,8 @@ namespace GameMain
             }
         }
 
+        public Font DefaultFont;
+
         public void InitBuildInfo()
         {
             if (m_BuildInfoTextAsset == null || string.IsNullOrEmpty(m_BuildInfoTextAsset.text))
