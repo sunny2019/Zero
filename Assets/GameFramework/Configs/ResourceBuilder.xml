@@ -2,8 +2,8 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>15</InternalResourceVersion>
-      <Platforms>2</Platforms>
+      <InternalResourceVersion>31</InternalResourceVersion>
+      <Platforms>128</Platforms>
       <ZipSelected>True</ZipSelected>
       <UncompressedAssetBundleSelected>False</UncompressedAssetBundleSelected>
       <DisableWriteTypeTreeSelected>False</DisableWriteTypeTreeSelected>
@@ -12,9 +12,9 @@
       <IgnoreTypeTreeChangesSelected>False</IgnoreTypeTreeChangesSelected>
       <AppendHashToAssetBundleNameSelected>False</AppendHashToAssetBundleNameSelected>
       <ChunkBasedCompressionSelected>True</ChunkBasedCompressionSelected>
-      <OutputPackageSelected>False</OutputPackageSelected>
-      <OutputFullSelected>True</OutputFullSelected>
-      <OutputPackedSelected>True</OutputPackedSelected>
+      <OutputPackageSelected>True</OutputPackageSelected>
+      <OutputFullSelected>False</OutputFullSelected>
+      <OutputPackedSelected>False</OutputPackedSelected>
       <BuildEventHandlerTypeName>
       </BuildEventHandlerTypeName>
       <OutputDirectory>C:/Users/changxinrui/Desktop/TestRes</OutputDirectory>

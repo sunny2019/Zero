@@ -2,7 +2,8 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="Fonts" LoadType="0" Packed="True" />
+      <Resource Name="Fonts" LoadType="1" Packed="True" />
+      <Resource Name="HotFix" LoadType="1" Packed="False" />
       <Resource Name="NativeUI" LoadType="1" Packed="True" />
       <Resource Name="Scenes" LoadType="1" Packed="False" />
       <Resource Name="TestCube" LoadType="1" Packed="False" />
@@ -18,6 +19,7 @@
       <Asset Guid="77cbb7c5404c10242ab59953e0746314" ResourceName="Fonts" />
       <Asset Guid="a8c07bbe04fdaf04b80e27f651a8edd6" ResourceName="UISprites" />
       <Asset Guid="ab45c3f613f388d43bbf43ec05eb92e2" ResourceName="UISprites" />
+      <Asset Guid="acafaaa423d2ca84fa185f2fca0f2782" ResourceName="HotFix" />
       <Asset Guid="b189e5b729f035b409abc3837c9a9013" ResourceName="Scenes" />
       <Asset Guid="cadd0764941c8b646ae79b51d0ea8285" ResourceName="UISprites" />
       <Asset Guid="e82837c9099f69a48b48fc44eb8d119d" ResourceName="UISprites" />

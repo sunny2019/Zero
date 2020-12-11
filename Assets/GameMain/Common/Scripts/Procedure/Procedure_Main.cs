@@ -11,15 +11,15 @@ namespace GameMain
         {
             base.OnEnter(procedureOwner);
             
-            GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId,OnLoadS);
-            GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId,OnLoadF);
+            GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadS);
+            GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadF);
             GameEntry.Scene.UnloadAllScene();
             GameEntry.Scene.LoadScene("Assets/GameMain/Common/Demo/Demo1_UI/Demo1_Menu.unity", this);
         }
 
         private void OnLoadF(object sender, GameEventArgs e)
         {
-            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs)e;
+            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
@@ -28,11 +28,12 @@ namespace GameMain
 
         private void OnLoadS(object sender, GameEventArgs e)
         {
-            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs)e;
+            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs) e;
             if (ne.UserData != this)
             {
                 return;
             }
+
             isFinshed = true;
         }
 
@@ -49,12 +50,10 @@ namespace GameMain
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {
             base.OnLeave(procedureOwner, isShutdown);
-            GameEntry.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId,OnLoadS);
-            GameEntry.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId,OnLoadF);
+            GameEntry.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId, OnLoadS);
+            GameEntry.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId, OnLoadF);
         }
 
         public bool isFinshed = false;
-
-
     }
 }
