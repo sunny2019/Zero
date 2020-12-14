@@ -2,7 +2,7 @@
     "name": "UnityGameFramework.Editor",
     "references": [
         "UnityGameFramework.Runtime",
-        "NewAssembly"
+        "GameFramework_Source"
     ],
     "includePlatforms": [
         "Editor"
