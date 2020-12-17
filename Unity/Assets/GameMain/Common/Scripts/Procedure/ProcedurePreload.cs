@@ -35,9 +35,7 @@ namespace GameMain
             }
             else
             {
-                m_LoadedFlag.Clear();
-
-                PreloadResources();
+                InitCompleteCallBack();
             }
         }
 
