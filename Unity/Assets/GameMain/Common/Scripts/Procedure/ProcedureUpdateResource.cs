@@ -78,7 +78,7 @@ namespace GameMain
                 m_UpdateResourceForm = Object.Instantiate(GameEntry.BuiltinData.UpdateResourceFormTemplate);
             }
 
-            Log.Info("Start update resource group 'Base' ...");
+            Log.Info("Start update resource ...");
 
             GameEntry.Resource.UpdateResources(UpdateResourcesComplete);
         }
@@ -104,7 +104,7 @@ namespace GameMain
 
             float progressTotal = (float) currentTotalUpdateLength / m_UpdateTotalZipLength;
             string descriptionText = string.Format("{0}/{1}, {2}/{3}, {4:P0}, {5}/s", m_UpdateSuccessCount.ToString(), m_UpdateCount.ToString(),
-                    GetLengthString(currentTotalUpdateLength), GetLengthString(m_UpdateTotalZipLength), progressTotal, GetLengthString((int) GameEntry.Download.CurrentSpeed));
+                GetLengthString(currentTotalUpdateLength), GetLengthString(m_UpdateTotalZipLength), progressTotal, GetLengthString((int) GameEntry.Download.CurrentSpeed));
             m_UpdateResourceForm.SetProgress(progressTotal, descriptionText);
         }
 
@@ -143,7 +143,7 @@ namespace GameMain
             }
 
 
-            //if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
+            if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
             {
                 GameEntry.UI.OpenUIForm("Assets/GameMain/Common/UI/UIForms/DialogForm.prefab", "DefaultGroup", new DialogParams
                 {
