@@ -27,8 +27,6 @@ namespace GameMain
         protected override void OnInit(ProcedureOwner procedureOwner)
         {
             base.OnInit(procedureOwner);
-            //先设置一下默认字体
-            UGuiForm.SetMainFont(GameEntry.BuiltinData.DefaultFont);
             m_UpdateVersionListCallbacks = new UpdateVersionListCallbacks(OnUpdateVersionListSuccess, OnUpdateVersionListFailure);
         }
 

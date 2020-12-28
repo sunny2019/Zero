@@ -19,8 +19,6 @@ namespace GameMain
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            //先设置一下默认字体
-            UGuiForm.SetMainFont(GameEntry.BuiltinData.DefaultFont);
             // TODO: 增加一个 Splash 动画，这里先跳过
             SplashOver = true;
         }

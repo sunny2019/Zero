@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-public static class SceneComponentExten 
+public static class SceneComponentExtension 
 {
     /// <summary>
     /// 卸载所有场景

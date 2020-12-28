@@ -53,6 +53,14 @@ namespace GameMain
                 Log.Warning("Parse build info failure.");
                 return;
             }
+
+            if (DefaultFont==null)
+            {
+                Log.Warning("No defaultFont.");
+                return;
+            }
+            //先设置一下默认字体
+            UGuiForm.SetMainFont(GameEntry.BuiltinData.DefaultFont);
         }
 
         

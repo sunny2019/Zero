@@ -7,35 +7,18 @@ namespace GameMain
 {
     public class Procedure_Main : ProcedureBase
     {
+        public bool isFinshed = false;
+
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            
-            GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadS);
-            GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadF);
+            Log.Info("开启Main流程...");
+            GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
+            GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
             GameEntry.Scene.UnloadAllScene();
             GameEntry.Scene.LoadScene("Assets/GameMain/Common/Demo/Demo1_UI/Demo1_Menu.unity", this);
         }
 
-        private void OnLoadF(object sender, GameEventArgs e)
-        {
-            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs) e;
-            if (ne.UserData != this)
-            {
-                return;
-            }
-        }
-
-        private void OnLoadS(object sender, GameEventArgs e)
-        {
-            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs) e;
-            if (ne.UserData != this)
-            {
-                return;
-            }
-
-            isFinshed = true;
-        }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
@@ -50,10 +33,30 @@ namespace GameMain
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {
             base.OnLeave(procedureOwner, isShutdown);
-            GameEntry.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId, OnLoadS);
-            GameEntry.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId, OnLoadF);
+            GameEntry.Event.Unsubscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
+            GameEntry.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
         }
 
-        public bool isFinshed = false;
+        private void OnLoadSceneSuccess(object sender, GameEventArgs e)
+        {
+            LoadSceneSuccessEventArgs ne = (LoadSceneSuccessEventArgs) e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+
+            isFinshed = true;
+        }
+        
+        private void OnLoadSceneFailure(object sender, GameEventArgs e)
+        {
+            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs) e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+        }
+
+        
     }
 }
