@@ -24,29 +24,9 @@ providers = {
 		priority = 25
 		defaultAction = null
 	}
-	res = {
-		active = true
-		priority = 100
-		defaultAction = null
-	}
 	query = {
 		active = true
 		priority = 100
-		defaultAction = null
-	}
-	object = {
-		active = true
-		priority = 55
-		defaultAction = null
-	}
-	calculator = {
-		active = true
-		priority = 10
-		defaultAction = null
-	}
-	menu = {
-		active = true
-		priority = 80
 		defaultAction = null
 	}
 	scene = {
@@ -54,19 +34,9 @@ providers = {
 		priority = 50
 		defaultAction = null
 	}
-	packages = {
+	object = {
 		active = true
-		priority = 90
-		defaultAction = null
-	}
-	static_methods = {
-		active = true
-		priority = 85
-		defaultAction = null
-	}
-	help = {
-		active = true
-		priority = -1
+		priority = 55
 		defaultAction = null
 	}
 	settings = {
@@ -74,9 +44,39 @@ providers = {
 		priority = 100
 		defaultAction = null
 	}
+	menu = {
+		active = true
+		priority = 80
+		defaultAction = null
+	}
+	calculator = {
+		active = true
+		priority = 10
+		defaultAction = null
+	}
+	res = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	help = {
+		active = true
+		priority = -1
+		defaultAction = null
+	}
+	packages = {
+		active = true
+		priority = 90
+		defaultAction = null
+	}
 	log = {
 		active = false
 		priority = 210
+		defaultAction = null
+	}
+	static_methods = {
+		active = true
+		priority = 85
 		defaultAction = null
 	}
 }

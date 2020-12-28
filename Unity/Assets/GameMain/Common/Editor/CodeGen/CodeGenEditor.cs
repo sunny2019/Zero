@@ -5,7 +5,7 @@ using UnityGameFramework.Runtime;
 
 namespace GameMain
 {
-    public class CodeGen
+    public class CodeGenEditor
     {
         private static string templatePathFormat = "Assets/GameMain/Common/Editor/Template/{0}.txt";
 

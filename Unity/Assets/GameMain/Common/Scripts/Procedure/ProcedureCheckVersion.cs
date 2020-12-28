@@ -182,6 +182,7 @@ namespace GameMain
 
             GameEntry.Resource.UpdatePrefixUri = Utility.Path.GetRegularPath(Path.Combine(m_VersionInfo.GameUpdateUrl, GetResourceVersionName(), GetPlatformPath()));
 
+            Log.Debug($"UpdatePrefixUri:{GameEntry.Resource.UpdatePrefixUri}");
             UpdateVersion();
         }
 
